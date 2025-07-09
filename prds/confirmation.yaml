@@ -1,0 +1,13 @@
+feature: Ticket Confirmation
+description: >
+  After successful payment, user sees confirmation screen. A downloadable e-ticket with QR code is provided.
+
+tech_stack:
+  frontend: React + Tailwind
+  backend: Node.js + Express + qrcode npm package
+pages:
+  - name: TicketPage
+    route: /ticket/:bookingId
+    data: booking_details
+    actions:
+      - download: save ticket as PDF or add to wallet

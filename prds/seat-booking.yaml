@@ -1,0 +1,17 @@
+feature: Seat Booking
+description: >
+  Users select seats from an interactive theatre layout. Seats are color-coded by category and availability.
+  User can select multiple seats and proceed to payment.
+
+tech_stack:
+  frontend: React + Tailwind + SVG
+  backend: Node.js + Express + MongoDB (real-time seat availability)
+pages:
+  - name: SeatSelectionPage
+    route: /book/:showId
+    fields:
+      - seat_category
+      - number_of_seats
+    actions:
+      - onSelect: update UI and booking state
+      - onProceed: navigate to payment
