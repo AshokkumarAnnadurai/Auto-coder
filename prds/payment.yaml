@@ -1,0 +1,18 @@
+feature: Payment Integration
+description: >
+  After seat selection, users are redirected to payment page. Multiple options supported: UPI, cards, wallets.
+  Handle secure transactions and update booking status.
+
+tech_stack:
+  frontend: React + Tailwind
+  backend: Node.js + Express
+  third_party: Razorpay or Stripe
+pages:
+  - name: PaymentPage
+    route: /payment
+    fields:
+      - payment_method
+      - promo_code
+    actions:
+      - onPay: process payment
+      - onSuccess: generate ticket and redirect to /ticket/:bookingId
