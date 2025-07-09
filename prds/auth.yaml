@@ -1,0 +1,26 @@
+feature: User Registration and Authentication
+description: >
+  Users can sign up/sign in using email or phone number. OTP-based mobile verification is supported.
+  Authenticated users can view movies and book tickets. Basic profile management (name, email, phone) is included.
+
+tech_stack:
+  frontend: React + Tailwind
+  backend: Node.js + Express + MongoDB
+pages:
+  - name: RegisterPage
+    route: /register
+    fields:
+      - name
+      - email
+      - phone
+      - password
+    actions:
+      - onSubmit: Save user and send OTP if phone is used
+
+  - name: LoginPage
+    route: /login
+    fields:
+      - email_or_phone
+      - password
+    actions:
+      - onSubmit: Validate credentials and redirect to /home

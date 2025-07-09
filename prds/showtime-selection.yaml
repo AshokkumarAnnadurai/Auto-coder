@@ -1,0 +1,15 @@
+feature: Theatre and Show Selection
+description: >
+  Users can view available theatres near their location, see showtimes, and select show for a movie.
+
+tech_stack:
+  frontend: React + Tailwind
+  backend: Node.js + Express + MongoDB + GeoLocation
+pages:
+  - name: ShowtimesPage
+    route: /movie/:id/showtimes
+    fields:
+      - date
+    actions:
+      - viewTheatres: List theatres by location
+      - selectShowtime: Choose a show
