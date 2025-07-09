@@ -1,0 +1,19 @@
+feature: Movie Discovery
+description: >
+  Users can browse currently running and upcoming movies, filter by language/genre/rating/location,
+  and view detailed information including cast, duration, trailers, synopsis, and reviews.
+
+tech_stack:
+  frontend: React + Tailwind
+  backend: Node.js + Express + MongoDB
+pages:
+  - name: HomePage
+    route: /home
+    data: movies
+    filters:
+      - language
+      - genre
+      - rating
+      - location
+    actions:
+      - viewDetails: navigate to /movie/:id
